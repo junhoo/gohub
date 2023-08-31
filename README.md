@@ -1,4 +1,4 @@
-##goeasy-api
+## goeasy-api
 
 ##### Build Setup
 ```
@@ -27,4 +27,5 @@ mysql> show tables;
 - sqlite
 - go-redis
 - zap（日志工具）
+- base64Captcha
 ---
