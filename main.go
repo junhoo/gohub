@@ -44,6 +44,9 @@ func main() {
 	// 初始化路由绑定
 	bootstrap.SetupRoute(router)
 
+	// logger.Dump(captcha.NewCaptcha().VerifyCaptcha("U2m76HKRN0xO2jfTmGrm", "252219"), "正确的数字验证码")
+	// logger.Dump(captcha.NewCaptcha().VerifyCaptcha("U2m76HKRN0xO2jfTmGrm", "000000"), "错误的数字验证码")
+
 	// 运行服务
 	err := router.Run(":" + config.Get("app.port"))
 	if err != nil {
