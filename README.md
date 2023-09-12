@@ -16,6 +16,9 @@ mysql -u root -p
 mysql> create database gohub; (Ps: uncreated use)
 mysql> use gohub;
 mysql> show tables;
+
+cd redis-file[You Folder]
+./src/redis-server
 ```
 ---
 ##### Built-in
