@@ -2,7 +2,6 @@
 package captcha
 
 import (
-	"fmt"
 	"gohub/pkg/app"
 	"gohub/pkg/config"
 	"gohub/pkg/redis"
@@ -56,10 +55,8 @@ func (c *Captcha) GenerateCaptcha() (id string, b64s string, err error) {
 
 // VerifyCaptcha 验证验证码是否正确
 func (c *Captcha) VerifyCaptcha(id string, answer string) (match bool) {
-	fmt.Printf("ID: %s, Answer: %s\n", id, answer)
 	// 方便本地和 API 自动测试
 	if !app.IsProduction() && id == config.GetString("captcha.testing_key") {
-		fmt.Printf("id equal: %s\n", id == config.GetString("captcha.testing_key"))
 		return true
 	}
 	// 第三个参数是验证后是否删除，我们选择 false
