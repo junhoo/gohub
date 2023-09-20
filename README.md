@@ -32,3 +32,7 @@ cd redis-file[You Folder]
 - zap（日志工具）
 - base64Captcha
 ---
+
+```
+routes -> controllers -> requests
+```
