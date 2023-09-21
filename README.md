@@ -31,6 +31,7 @@ cd redis-file[You Folder]
 - go-redis
 - zap（日志工具）
 - base64Captcha
+- crypto
 ---
 
 ```
