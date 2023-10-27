@@ -34,6 +34,10 @@ cd redis-file[You Folder]
 - crypto
 - ansi（高亮打印）
 ---
+##### Create model
+```
+go run main.go make model [ModelName]
+```
 
 ```
 routes -> controllers -> requests
