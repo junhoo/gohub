@@ -8,8 +8,6 @@ import (
 	"gohub/pkg/logger"
 	"time"
 
-	"gohub/app/models/user"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -51,5 +49,5 @@ func SetupDB() {
 	database.SQLDB.SetConnMaxLifetime(time.Duration(config.GetInt("database.mysql.max_life_seconds")) * time.Second)
 
 	// Gorm 自动迁移功能
-	database.DB.AutoMigrate(&user.User{})
+	// database.DB.AutoMigrate(&user.User{})
 }
