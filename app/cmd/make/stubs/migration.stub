@@ -10,7 +10,7 @@ import (
 
 func init() {
 
-    type {{StructName}} struct {
+    type User struct {
         models.BaseModel
 
         Name     string `gorm:"type:varchar(255);not null;index"`
@@ -22,11 +22,11 @@ func init() {
     }
 
     up := func(migrator gorm.Migrator, DB *sql.DB) {
-        migrator.AutoMigrate(&{{StructName}}{})
+        migrator.AutoMigrate(&User{})
     }
 
     down := func(migrator gorm.Migrator, DB *sql.DB) {
-        migrator.DropTable(&{{StructName}}{})
+        migrator.DropTable(&User{})
     }
 
     migrate.Add("{{FileName}}", up, down)
