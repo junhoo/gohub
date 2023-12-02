@@ -57,6 +57,7 @@ func RegisterAPIRoutes(r *gin.Engine) {
 			usersGroup := v1.Group("/users")
 			{
 				usersGroup.GET("", uc.Index)
+				usersGroup.PUT("", middlewares.AuthJWT(), uc.UpdateProfile)
 			}
 
 			cgc := new(controllers.CategoriesController)
@@ -78,7 +79,7 @@ func RegisterAPIRoutes(r *gin.Engine) {
 				tpcGroup.GET("/:id", tpc.Show)
 			}
 
-			lsc := new(controllers.TopicsController)
+			lsc := new(controllers.LinksController)
 			linksGroup := v1.Group("/links")
 			{
 				linksGroup.GET("", lsc.Index)
